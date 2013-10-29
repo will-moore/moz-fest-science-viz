@@ -3,6 +3,7 @@
 (function(){
   var width = 530;
   var height = 530;
+  var r;
   
 
   // For every pixel in 'this' image, plot x:red, y:green
@@ -35,10 +36,6 @@
         plotdata.push({x:data[i], y:data[i + 1]});
       }
 
-      el = document.querySelector("div.ruse");
-      el.innerHTML = "";
-
-      r = new ruse(el, 500, 500);
       r.plot(plotdata);
     };
 
@@ -46,6 +43,11 @@
   };
   
   domReady = function() {
+
+    var el = document.querySelector("div.ruse");
+
+    r = new ruse(el, 500, 500);
+    r.animation = false;
 
     // Set up 'click' handler for images.
     var posImg = document.querySelector("img.pos");
