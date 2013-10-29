@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Mozilla Festival: Scientific Data Visualization</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" charset="utf-8">
+    
+    <script src="javascript/gl-matrix.js"></script>
+    <script src="javascript/ruse.js"></script>
+    
+    <script src="javascript/colocalisation.js"></script>
+  </head>
+
+  <style type="text/css">
+  .content {
+    width:500px;
+    height:500px;
+    float:left;
+  }
+
+  img.thumb {
+    width: 250px;
+    height: 250px;
+    border: solid 2px #fff;
+    margin: 2px;
+    cursor: pointer;
+  }
+  </style>
+  
+  <body>
+    <h3>Colocalization of SSX2IP (red), PCM-1 (green), assessed by scatter plot</h3>
+    <div class="content">
+      
+      <div class="ruse"></div>
+    </div>
+
+    <img class="thumb pos" src="data/JCB-dataviewer/coloc_interphase.jpg" title="Interphase"/>
+    <img class="thumb neg" src="data/JCB-dataviewer/coloc_mitosis.jpg" title="Mitosis"/>
+
+    <div style="clear:both"></div>
+    <p>For each pixel in image, plot: X-axis: Red intensity, Y-axis: Green intensity</p>
+
+    <p>Images from JCB Data Viewer: <a href="http://jcb-dataviewer.rupress.org/jcb/browse/6330/20671/">Figure 6 (B)</a>
+      of <a href="http://jcb.rupress.org/content/202/1/81">Bärenz et. al (2013)</a>.
+
+  </body>
+</html>
